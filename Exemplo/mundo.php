@@ -1,5 +1,5 @@
 <?php
-require_once dirname(__FILE__) . '/../../Autoloader.php';
+require_once dirname(__FILE__) . '/../Libs/Localidades.class.php';
 
 $strSaida = null;
 $strParam = isset($_GET['param']) ? $_GET['param'] : 'paises';
