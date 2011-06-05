@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <connection name="mundo" type="sqlite" db="__FILE__/Localidades.db" />
+
+    <query name="listarCidades" connection="mundo">
+        <query>
+            SELECT cod, pais, uf, nome
+              FROM cidades
+             WHERE pais = :intPais
+               AND uf   = :intEstado 
+            ORDER BY nome
+        </query>
+    </query>
+    <query name="listarEstados" connection="mundo">
+        <query>
+            SELECT Cod, Pais, Nm
+              FROM estados
+             WHERE Pais = :intPais
+             ORDER BY Nm
+        </query>
+    </query>
+    <query name="listarPaises" connection="mundo">
+        <query>
+            SELECT Cod, Nm, sigla
+              FROM paises
+             ORDER BY Nm
+        </query>
+    </query>
+</root>

@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt" lang="pt">
+    <head>
+        <title>Localidades - Exemplo</title>
+        <meta name="resource-type" content="document" />
+        <meta name="classification" content="Internet" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="robots" content="ALL" />
+        <meta name="distribution" content="Global" />
+        <meta name="rating" content="General" />
+        <meta name="author" content="Thiago Paes (thiago(a)thiagopaes·com·br)" />
+        <meta name="language" content="pt-br" />
+        <meta name="doc-class" content="Completed" />
+        <meta name="doc-rights" content="Public" />
+
+        <script type="text/javascript" src="js/prototype-min.js"></script>
+        <script type="text/javascript" src="js/mundo.js"></script>
+    </head>
+    <body>
+        <h1>Localidades</h1>
+
+        <table>
+            <tr>
+                <td>
+                    <label>País</label>
+                    <select id="fgPais" name="pais" title="País" onchange="buscaEstados()"></select>
+                    <input type="hidden" name="fgPaisOrig" id="fgPaisOrig" value="1" />
+                </td>
+                <td>
+                    <label>Estado</label>
+                    <select id="fgEstado" name="estado" title="Estado" onchange="buscaCidades()"></select>
+                    <input type="hidden" name="fgEstadoOrig" id="fgEstadoOrig" value="24" />
+                </td>
+                <td>
+                    <label>Cidade&nbsp;</label>
+                    <select id="fgCidade"  name="cidade" title="Cidade"></select>
+                    <input type="hidden" name="fgCidadeOrig" id="fgCidadeOrig" value="8547" />
+                </td>
+            </tr>
+        </table>
+        
+        <script type="text/javascript">
+            <!--
+            Event.observe(window, 'load', function() {
+                buscaPaises();
+            });
+            //-->
+        </script>
+    </body>
+</html>
